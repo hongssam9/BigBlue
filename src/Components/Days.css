@@ -1,0 +1,11 @@
+.days__prevnext--change {
+    display: inline-block;
+    width: 50%;
+    padding: 2rem;
+    font-size: small;
+    color: #2C58D6  
+}
+
+#days__prevnext--next {
+    text-align: right;
+}

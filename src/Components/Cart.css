@@ -1,0 +1,28 @@
+.cart{
+    text-align: center;
+}
+
+.cart__list{
+    border: black dotted 1px;
+    width: 500px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cart__list--options{
+    border: black solid 1px;
+    width: 400px;
+    height: 30px;
+    margin: 10px;
+}
+
+.cart__buttons{
+    border: black solid 1px;
+    width: 100px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px;
+  
+}

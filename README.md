@@ -12,29 +12,6 @@ Build a schedule search results page for the following students using `schedule_
 
 Complete the required functionality, and at least one of the optional functionality items.
 
-A backend is **NOT** required for this solution. At Big Blue we use Vue+Typescript for our current frontend applications; feel free to use any frontend tools/frameworks you are comfortable using.
-
-```json
-{
-  "students": [
-    {
-      "first_name": "First",
-      "last_name": "Kinder",
-      "instructor_gender": "Any",
-      "id": 40057,
-      "level_id": 18
-    },
-    {
-      "first_name": "Second",
-      "last_name": "Kinder",
-      "instructor_gender": "Any",
-      "id": 40831,
-      "level_id": 9
-    }
-  ]
-}
-```
-
 ### Required Functionality
 
 1. As a user, I would like the schedule search results to be provided in an easy to read list, so that I am able to easily see what day/times are available for my kids. _(See Examples)_

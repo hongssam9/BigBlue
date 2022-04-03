@@ -1,0 +1,35 @@
+.days{
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sche:not(:last-child){
+    margin-right: 46px;
+}
+
+.days__prevnext{
+    display: flex;
+    justify-content: center;
+    color:#2C58D6;
+    font-weight: 500;
+}
+
+.days__week {
+    border-bottom: 1px solid black;
+    margin: 0 5% 30px 5%;
+    display: flex;
+    font-size: 15px;
+}
+
+.sche{
+    margin-bottom: 5px;
+}
+
+p:not(:last-child){
+    margin-right: 320px;
+}
+
+p:not(:first-child){
+    margin-left: 320px;
+}

@@ -10,11 +10,10 @@
     margin-right: auto;
 }
 
-.cart__list--options{
-    border: black solid 1px;
-    width: 400px;
-    height: 30px;
-    margin: 10px;
+.cart__empty--container{
+   margin-top: 70px;
+   font-weight: 500;
+   font-style: italic;
 }
 
 .cart__buttons{
@@ -24,5 +23,9 @@
     margin-left: auto;
     margin-right: auto;
     margin-top:10px;
-  
+    background-color: rgb(109, 180, 195); 
+}
+
+button:hover{
+    background-color: white
 }

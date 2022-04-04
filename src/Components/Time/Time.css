@@ -2,7 +2,14 @@
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    max-width: 850px;
+    max-width: 860px;
+    
+}
+
+.time ul {
+    list-style: none;
+    display: flex;
+    flex-wrap:wrap;
 }
 
 .time__buttons{
@@ -11,9 +18,15 @@
     font-size: 13px;
     border: solid #2C58D6 1px;
     background-color: transparent;
-    color:#2C58D6; 
+    color:#2C58D6;
+    margin-top: 10px; 
 }
 
-.time__buttons:not(:first-child){
-    margin-left: 10px;
+.time li{
+    margin-left: 10px
+} 
+
+.time li :hover{
+    background-color: rgb(37, 227, 220);
+    cursor: pointer;
 }

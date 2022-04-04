@@ -25,7 +25,7 @@ const Days = ({schedule, setSelectedDate}) => {
             <div className="days__week">
                 <ul>
                     {schedule.map((day, i) => (
-                        <li key={i} onClick={() => handleClick(day)}>{day.date}</li>
+                        <li key={i} onClick={() => handleClick(day)}><div>{day.date}</div></li>
                     ))}    
                 </ul>    
             </div>      

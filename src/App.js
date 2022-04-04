@@ -1,7 +1,7 @@
 import './App.css';
 import { Route, Routes } from "react-router-dom"
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom"
 import Cart from './Components/Cart/Cart.jsx'
 import schedule from "./data/schedule_response.json"
 import Times from "./Components/Time/Time.jsx"
@@ -29,30 +29,40 @@ function App() {
       <div className="app__header">
         <div className="header__title">
           <div className="header__title--title" id="title">ADD WEEKLY LESSON </div>
-          <a href="/Cart"><div className="header__title--title" id="header__cart">
+          <Link to="/Cart"><div className="header__title--title" id="header__cart">
             <TiShoppingCart /> CART
           </div>
-          </a>
+          </Link>
         </div>
         <div className="header__sdi">
-          <a href="/Swimmers"><div className="header__sdi--options">Swimmers<br /> <BiSwim /> <div id="header__sdi--circle">2</div></div></a>
-          <a href="/"><div className="header__sdi--options">Days <br /> <AiOutlineCalendar /> <span>Select</span></div></a>
-          <a href="/Instructors"><div className="header__sdi--options">Instructors<br /> <BsPerson /> <span>Select</span></div></a>
+          <Link to="/Swimmers"><div className="header__sdi--options">Swimmers<br /> <BiSwim /> <div id="header__sdi--circle">2</div></div></Link>
+          <Link to="/"><div className="header__sdi--options">Days <br /> <AiOutlineCalendar /> <span>Select</span></div></Link>
+          <Link to="/Instructors"><div className="header__sdi--options">Instructors<br /> <BsPerson /> <span>Select</span></div></Link>
         </div>
-      </div>
-
-
+      </div> 
 
       <Routes>
-        <Route exact path="/Cart" element={<Cart cartItems={cartItems} setCart={setCartItems} />} />
-        <Route path="/" element={<Days schedule={schedule} setSelectedDate={setSelectedDate}/>} />
+        <Route exact path="/Cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems} />} />
+        {/* 
+          set 2 elements inside home page since putting the Times component anywhere else will
+          also appear in the instructors/swimmers tab or using a links would refresh the page
+          and have the items in the cart disappear since this is only a frontend program
+        */}
+        <Route path="/" element={<><Days schedule={schedule} setSelectedDate={setSelectedDate}/> <Times selectedDate={selectedDate} cartItems={cartItems} setCartItems={setCartItems}/> </>} />
+        {/* <Route path="/Times" element={<Times selectedDate={selectedDate} cartItems={cartItems} setCartItems={setCartItems}/>} /> */}
         <Route exact path="/Instructors" element={<Instructors />} />
         <Route exact path="/Swimmers" element={<Swimmers />} /> 
       </Routes>
 
-      <Times selectedDate={selectedDate} cartItems={cartItems} setCartItems={setCartItems} /> 
     </div>
   );
 }
 
 export default App;
+
+/* 
+  1) Make dates show up
+  2) Make one time show up for date
+  3) Make times show up for date
+  4) Map map map...
+*/

@@ -21,7 +21,7 @@ const Instructors = () => {
           {
             Object.keys(schedule).map((key,i,j) => (
                 <div className="instructors__per" key={i}>
-                    <Avatar className="swimmers__per--avatar" src={`https://avatars.dicebear.com/api/human.svg`} /> 
+                    <Avatar className="swimmers__per--avatar" /> 
                     {schedule[i].times[i].students[0].opening.employee.full_name}
                     <br />
                      

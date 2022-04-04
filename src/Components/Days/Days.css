@@ -4,26 +4,11 @@
     margin-right: auto;
 }
 
-.sche:not(:last-child){
-    margin-right: 46px;
-}
-
 .days__prevnext{
     display: flex;
     justify-content: center;
     color:#2C58D6;
     font-weight: 500;
-}
-
-.days__week {
-    border-bottom: 1px solid black;
-    margin: 0 5% 30px 5%;
-    display: flex;
-    font-size: 15px;
-}
-
-.sche{
-    margin-bottom: 5px;
 }
 
 p:not(:last-child){
@@ -32,4 +17,24 @@ p:not(:last-child){
 
 p:not(:first-child){
     margin-left: 320px;
+}
+
+.days__week {
+    border-bottom: 1px solid black;
+    margin: 0 5% 30px 5%;
+    font-size: 15px;
+}
+
+.days__week ul {
+    list-style: none;
+    display: flex;
+}
+
+.days__week ul :not(:first-child){
+    margin-left: 38px;
+}
+
+.days__week li :hover{
+    color: #2C58D6;
+    cursor: pointer;
 }

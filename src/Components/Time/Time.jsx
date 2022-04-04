@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Time.css"
 
-const Time = ({selectedDate, cartItems, setCartItems}) => {
+const Time = ({ selectedDate, cartItems, setCartItems }) => {
     /* bring in the variables set in App.js */
 
     /* 
@@ -20,37 +20,44 @@ const Time = ({selectedDate, cartItems, setCartItems}) => {
     Then it will grab the rest of the cartItems/destructure the cart items,
     then add the item in the cartItems
     */
-    const addToCart = (item) =>{
+    const addToCart = (item) => {
         item.addedToCart = true
         setCartItems([...cartItems, item])
     }
 
     return (
         <div className="time">
-           <ul>
-               {
-                   /* 
-                    if SelectedDate exists, map out the time
-                    for that date, if not, stop. 
-                   */
-                   selectedDate ? times.map((time,index) => (
-                       <li 
-                        key={index}
-                        /* 
-                        when clicked, make time null, unavailable to click. else,
-                        take the item in the parameter and add the time to cart
-                        */
-                        
-                        onClick={time.addedToCart ? null : () => addToCart(time)}
+            <ul>
+                {
+                    /* 
+                     if SelectedDate exists, map out the time
+                     for that date, if not, stop. 
+                    */
+                    selectedDate ? times.map((time, index) => (
+                        <li
+                            key={index}
+                            /* 
+                            when clicked, make time null, unavailable to click. else,
+                            take the item in the parameter and add the time to cart
+                            */
+
+                            onClick={time.addedToCart ? null : () => addToCart(time)}
                         >
-                            {time.time}
+                            <div className="time__buttons">{time.time}</div>
                         </li>
-                   )):null
-               }
-           </ul>
+                    )) : null
+                }
+            </ul>
         </div>
 
     );
 };
 
 export default Time;
+
+/* 
+    Try to make them show up...
+    press time and push it up...
+    why does pressing cart keep making them items disappear.... why...
+    Change route from a href to Links
+*/

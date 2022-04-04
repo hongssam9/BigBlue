@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import studentsjson from '../../data/schedule_request.json'
 import "./Swimmers.css"
 import { Avatar } from "@mui/material"
@@ -8,9 +8,9 @@ const Swimmers = () => {
     return (
         <div className="swimmers">
             {
-                studentJson.map((element, index, array) => (
-                    <div className="swimmers__per" key={index}>
-                        <Avatar className="swimmers__per--avatar" src={`https://avatars.dicebear.com/api/human.svg`} />
+                studentJson.map((element, i) => (
+                    <div className="swimmers__per" key={i}>
+                        <Avatar className="swimmers__per--avatar" />
                         {element.first_name} {element.last_name}
                     </div>
                 ))

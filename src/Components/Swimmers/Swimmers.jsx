@@ -8,10 +8,10 @@ const Swimmers = () => {
     return (
         <div className="swimmers">
             {
-                studentJson.map((element, i) => (
+                studentJson.map((swimmer, i) => (
                     <div className="swimmers__per" key={i}>
                         <Avatar className="swimmers__per--avatar" />
-                        {element.first_name} {element.last_name}
+                        {swimmer.first_name} {swimmer.last_name}
                     </div>
                 ))
             }

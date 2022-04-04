@@ -16,6 +16,7 @@ const Days = ({schedule, setSelectedDate}) => {
                 <p>
                     <HiArrowNarrowLeft /> Prev Week
                 </p>
+                <section>Select a Date/Time</section>
                 <p className="second-p">
                     Next Week <HiArrowNarrowRight />
                 </p>

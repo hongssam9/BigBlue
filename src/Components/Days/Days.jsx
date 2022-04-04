@@ -1,14 +1,17 @@
-import React, { useContext } from 'react';
-import { scheduleContext } from '../../App.js'
-import { Link } from 'react-router-dom';
+import React from 'react';
 import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi"
 import "./Days.css"
-import Time from "../Time/Time"
 
-const Days = () => {
-    const schedule = useContext(scheduleContext)
+const Days = ({schedule, setSelectedDate}) => {
+    /* First destructure, bringing in schedule and setSelectedDate */
+
+    /* handling the click function where when useState setSelectedDate is called, the variable date is taken in */
+    const handleClick= (date) =>{
+        setSelectedDate(date)
+    }
     return (
         <div className="days">
+            {/* Styling purposes */}
             <div className="days__prevnext">
                 <p>
                     <HiArrowNarrowLeft /> Prev Week
@@ -17,15 +20,15 @@ const Days = () => {
                     Next Week <HiArrowNarrowRight />
                 </p>
             </div>
+
+            
             <div className="days__week">
-                {
-                    schedule.map((sche, index) =>
-                        <div className="sche" key={index}>
-                            <Link to="">{sche.date}</Link>
-                        </div>)
-                }
-            </div>
-            <Time />
+                <ul>
+                    {schedule.map((day, i) => (
+                        <li key={i} onClick={() => handleClick(day)}>{day.date}</li>
+                    ))}    
+                </ul>    
+            </div>      
         </div>
     );
 };
